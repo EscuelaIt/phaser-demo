@@ -16,6 +16,8 @@ export class Monster extends Phaser.Scene {
     
     this.physics.add.collider(this.grass, this.monster, this.colision, null, this);
     this.monster.setBounce(1);
+    
+    this.cursors = this.input.keyboard.createCursorKeys();
   }
 
   colision() {
@@ -26,5 +28,24 @@ export class Monster extends Phaser.Scene {
 
   getRandomVelocity() {
     return Math.floor((Math.random() * 20) - 10);
+  }
+
+  update() {
+    if (this.cursors.left.isDown) {
+      this.grass.setVelocityX(-300);
+    }
+    else if (this.cursors.right.isDown) {
+      this.grass.setVelocityX(300);
+    } 
+    else if(this.cursors.up.isDown) {
+      this.grass.setVelocityY(-15);
+    }
+    else if(this.cursors.down.isDown) {
+      this.grass.setVelocityY(15);
+    }
+    else {
+      this.grass.setVelocityX(0);
+      this.grass.setVelocityY(0);
+    }
   }
 }
