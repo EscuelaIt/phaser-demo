@@ -28,12 +28,16 @@ export class Monster extends Phaser.Scene {
     this.monster.setBounce(1);
     
     this.cursors = this.input.keyboard.createCursorKeys();
+
+    this.gameoverAudio = this.sound.add('gameoversample')
+    this.jumpAudio = this.sound.add('jumpsample')
   }
 
   colision() {
     console.log('colision', this.getRandomVelocity());
     this.grass.setY(this.grass.y + 1);
-    this.monster.setVelocityX(this.getRandomVelocity())
+    this.monster.setVelocityX(this.getRandomVelocity());
+    this.jumpAudio.play();
   }
 
   getRandomVelocity() {
@@ -59,6 +63,7 @@ export class Monster extends Phaser.Scene {
     }
 
     if(this.monster.y > 500) {
+      this.gameoverAudio.play();
       this.scene.pause();
       this.scene.start('game');
     }

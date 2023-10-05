@@ -18,6 +18,9 @@ export class Welcome extends Phaser.Scene {
       'images/monster2-sprites.png',
       { frameWidth: 326, frameHeight: 385 }
     );
+
+    this.load.audio('gameoversample', '/audio/fin.ogg');
+    this.load.audio('jumpsample', '/audio/jump.ogg');
   }
 
   create() {
