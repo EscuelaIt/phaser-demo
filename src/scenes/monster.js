@@ -8,7 +8,17 @@ export class Monster extends Phaser.Scene {
 
   create() {
     this.add.image(410, 250, 'background');
-    this.monster = this.physics.add.image(390, 240, 'monster1');
+    
+    this.monster = this.physics.add.sprite(390, 240, 'monster2');
+    this.anims.create({
+      key: 'monsteranimation',
+      frames: this.anims.generateFrameNumbers('monster2', { start: 0, end: 3 }),
+      frameRate: 10,
+      repeat: -1,
+      yoyo: true,
+    });
+    this.monster.anims.play('monsteranimation');
+
     this.monster.setScale(0.3);
     this.grass = this.physics.add.image(390, 440, 'grass');
     this.grass.body.allowGravity = false;

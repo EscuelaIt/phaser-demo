@@ -12,6 +12,12 @@ export class Welcome extends Phaser.Scene {
     this.load.image('play', '/images/jugar.png');
     this.load.image('monster1', '/images/monster1.png');
     this.load.image('grass', '/images/grass.png');
+
+    this.load.spritesheet(
+      'monster2',
+      'images/monster2-sprites.png',
+      { frameWidth: 326, frameHeight: 385 }
+    );
   }
 
   create() {
