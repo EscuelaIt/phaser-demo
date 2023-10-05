@@ -12,7 +12,7 @@ export class Monster extends Phaser.Scene {
     this.monster = this.physics.add.sprite(390, 240, 'monster2');
     this.anims.create({
       key: 'monsteranimation',
-      frames: this.anims.generateFrameNumbers('monster2', { start: 0, end: 3 }),
+      frames: this.anims.generateFrameNumbers('monster2', { start: 0, end: 2 }),
       frameRate: 10,
       repeat: -1,
       yoyo: true,
