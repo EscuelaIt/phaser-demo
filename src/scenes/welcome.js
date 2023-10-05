@@ -8,9 +8,11 @@ export class Welcome extends Phaser.Scene {
 
   preload() {
     this.load.image('background', '/images/galaxy.jpg');
+    this.load.image('hello', '/images/hello.png');
   }
 
   create() {
     this.add.image(410, 250, 'background');
+    this.add.image(420, 110, 'hello');
   }
 }
