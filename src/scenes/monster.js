@@ -27,7 +27,7 @@ export class Monster extends Phaser.Scene {
   }
 
   getRandomVelocity() {
-    return Math.floor((Math.random() * 20) - 10);
+    return Math.floor((Math.random() * 90) - 45);
   }
 
   update() {
@@ -46,6 +46,11 @@ export class Monster extends Phaser.Scene {
     else {
       this.grass.setVelocityX(0);
       this.grass.setVelocityY(0);
+    }
+
+    if(this.monster.y > 500) {
+      this.scene.pause();
+      this.scene.start('game');
     }
   }
 }
