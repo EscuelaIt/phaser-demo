@@ -14,7 +14,12 @@ export class Monster extends Phaser.Scene {
     this.grass.body.allowGravity = false;
     this.grass.setImmovable();
     
-    this.physics.add.collider(this.grass, this.monster);
+    this.physics.add.collider(this.grass, this.monster, this.colision, null, this);
     this.monster.setBounce(1);
+  }
+
+  colision() {
+    console.log('colision', this);
+    this.grass.setY(this.grass.y + 1);
   }
 }
