@@ -11,6 +11,7 @@ export class Welcome extends Phaser.Scene {
     this.load.image('hello', '/images/hello.png');
     this.load.image('play', '/images/jugar.png');
     this.load.image('monster1', '/images/monster1.png');
+    this.load.image('grass', '/images/grass.png');
   }
 
   create() {
