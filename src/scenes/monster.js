@@ -19,7 +19,12 @@ export class Monster extends Phaser.Scene {
   }
 
   colision() {
-    console.log('colision', this);
+    console.log('colision', this.getRandomVelocity());
     this.grass.setY(this.grass.y + 1);
+    this.monster.setVelocityX(this.getRandomVelocity())
+  }
+
+  getRandomVelocity() {
+    return Math.floor((Math.random() * 20) - 10);
   }
 }
