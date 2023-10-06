@@ -1,7 +1,7 @@
-import './style.css';
+import './styles/style.css';
 import Phaser from 'phaser';
-import { Welcome } from './src/scenes/welcome';
-import { Monster } from './src/scenes/monster';
+import { Welcome } from './scenes/welcome';
+import { Monster } from './scenes/monster';
 
 const config = {
   type: Phaser.AUTO,

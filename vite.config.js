@@ -16,7 +16,9 @@ export default defineConfig({
         name: 'Demo Phaser',
         short_name: 'Demo Phaser',
         description: 'Un demo de Phaser',
-        theme_color: '#ffffff',
+        theme_color: '#112233',
+        display: 'fullscreen',
+        orientation: 'landscape',
         icons: [
           {
             src: 'pwa-192x192.png',
