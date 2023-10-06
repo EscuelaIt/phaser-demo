@@ -4,10 +4,6 @@ html, body {
 
 body {
   margin: 0;
-  background-color: #123;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
+  background-color: #123;  
 }
 
