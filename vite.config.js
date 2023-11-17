@@ -2,9 +2,6 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  build: {
-    outDir: 'docs'
-  },
   plugins: [
     VitePWA({ 
       injectRegister: 'auto',
